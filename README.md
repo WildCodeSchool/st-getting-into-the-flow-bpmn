@@ -1,6 +1,6 @@
-# Getting into the Flow with Flowengines & BPNM
+# Getting into the Flow with Business Flow Management
 
-This repository contains all sources and slides to replay the Tutoring-Session *Getting into the Flow with Flowengines & BPNM*.
+This repository contains all sources and slides to replay the Tutoring-Session *Getting into the Flow with Business Flow Management*.
 
 ## Prerequisites
 
