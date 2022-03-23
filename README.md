@@ -2,13 +2,11 @@
 
 This repository contains all sources and slides to replay the Tutoring-Session *Getting into the Flow with Business Flow Management*.
 
-## Prerequisites
-
-* Unrestricted Internet Access for Maven usage
-* Local IDE installation, eg. IntelliJ or Eclipse (optional). You can download IntelliJ CE here: https://www.jetbrains.com/idea/download/
-* Java 11+ (might be included in IDE)
-* Maven 3+ (might be included in IDE)
-
 ## Run
 
-* Tests can be executed with Maven or directly in your IDE.
+* There is no main class, all **State Pattern** and **State Machine** examples are in the packages `naive`,`statepattern` and `enumstate`
+* Persistent States with Spring State Machine can be tested by starting `PersistentStateApplication`
+* For the Drools Example see https://springhow.com/spring-boot-drools/
+* For the Camunda Workflow Example, use: `docker run -d --name camunda -p 8080:8080 camunda/camunda-bpm-platform:run-latest`
+  * Install the Modeller
+  * Open and Deploy `src/main/resources/camunda`
