@@ -1,6 +1,5 @@
 package dev.wcs.tutoring.ssm;
 
-import dev.wcs.tutoring.ssm.naive.OrderState;
 import dev.wcs.tutoring.ssm.statepattern.states.ProcessingState;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +16,7 @@ public class TestStatePatterns {
         order.setPrice(BigDecimal.TEN);
         order.setQuantity(1);
         order.calculateNextState("process");
-        assertEquals(OrderState.PROCESSING, order.getState());
+        assertEquals(dev.wcs.tutoring.ssm.naive.OrderState.PROCESSING, order.getState());
     }
 
     @Test
