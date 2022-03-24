@@ -1,8 +1,11 @@
 package dev.wcs.tutoring.ssm.enumstate;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Data
 public class Order {
 
     private String id;
@@ -19,39 +22,6 @@ public class Order {
 
     public void calculateNextState(String action) {
         state = state.handle(this, action);
-    }
-
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
-    public void setShippingDate(LocalDate shippingDate) {
-        this.shippingDate = shippingDate;
-    }
-
-    public LocalDate getDeliveryDate() {
-        return deliveryDate;
     }
 
 }
