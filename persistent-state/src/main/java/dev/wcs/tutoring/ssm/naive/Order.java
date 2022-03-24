@@ -17,7 +17,7 @@ public class Order {
     private LocalDate shippingDate;
     private LocalDate deliveryDate;
 
-    private String state;
+    private String state = OrderState.ORDERED;
 
     public void calculateNextState(String action) {
         switch (action.toLowerCase()) {
@@ -34,6 +34,7 @@ public class Order {
                     }
                 }
             }
+            break;
             case "send": {
                 if (state.equals(OrderState.PROCESSING)) {
                     if (available) {
@@ -44,6 +45,7 @@ public class Order {
                     }
                 }
             }
+            break;
             case "close": {
                 if (state.equals(OrderState.DELIVERED)) {
                     if (deliveryDate.isBefore(LocalDate.now())) {
@@ -53,6 +55,7 @@ public class Order {
                     }
                 }
             }
+            break;
         }
     }
 
